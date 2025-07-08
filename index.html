@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="author" content="Van Bao Han Quach">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Matching Game</title>
+    <link href="https://fonts.cdnfonts.com/css/hello-bonia-serif" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/libertinus-mono" rel="stylesheet">
+                
+    <link rel="stylesheet" href="assign2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assign2.js" defer></script>
+</head>
+<body>
+     <div id="front-page" class = "bounce-in">
+        <h1 class = "bounce-in">Axolotl Matching</h1>
+
+        <p>Welcome to the Memory Game! Test your memory by matching pairs of Axolotl
+ cards.</p>
+        <button id="start-button">Start Game</button>
+     </div>
+
+
+    <div id="game-board" class = "bounce-in">
+        <div id="header">
+            <h1>Memory Game</h1>
+            <div id="stats">
+                <span id="moves">Score: 0</span>
+                <span id="timer">Time: 0s</span>
+            </div>
+            <button id="restart-button">Restart Game</button>
+        </div>
+
+        <div id="cards-container" class = "bounce-in">
+            <div class="card" data-value="eat">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <video autoplay muted loop>
+                            <source src="images/wing.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/eat.png" alt="Eat">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-value="eat">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <video autoplay muted loop>
+                            <source src="images/wing.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card-back">
+                        <img src="images/eat.png" alt="Eat">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-value="mocking">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/mocking.png" alt="Mocking"></div>
+                </div>
+            </div>
+
+            <div class="card" data-value="mocking">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/mocking.png" alt="Mocking"></div>
+                </div>
+            </div>
+
+            <div class="card" data-value="love">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/love.png" alt="Love"></div>
+                </div>
+            </div>
+
+            <div class="card" data-value="love">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/love.png" alt="Love"></div>
+                </div>
+            </div>
+
+            <div class="card" data-value="angry">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/angry.png" alt="Angry"></div>
+                </div>
+            </div>
+
+            <div class="card" data-value="angry">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/angry.png" alt="Angry"></div>
+                </div>
+            </div>
+
+            <div class="card" data-value="excited">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/excited.png" alt="Excited"></div>
+                </div>
+            </div>
+
+            <div class="card" data-value="excited">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/excited.png" alt="Excited"></div>
+                </div>
+            </div>
+
+            <div class="card" data-value="read">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/read.png" alt="Read"></div>
+                </div>
+            </div>
+
+            <div class="card" data-value="read">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/read.png" alt="Read"></div>
+                </div>
+            </div>
+
+            <div class="card" data-value="shocked">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/shocked.png" alt="Shocked"></div>
+                </div>
+            </div>
+
+            <div class="card" data-value="shocked">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/shocked.png" alt="Shocked"></div>
+                </div>
+            </div>
+
+            <div class="card" data-value="happy">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/happy.png" alt="Happy"></div>
+                </div>
+            </div>
+
+            <div class="card" data-value="happy">
+                <div class="card-inner">
+                    <div class="card-front"><video autoplay muted loop><source src="images/wing.mp4" type="video/mp4"></video></div>
+                    <div class="card-back"><img src="images/happy.png" alt="Happy"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
